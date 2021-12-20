@@ -1,0 +1,164 @@
+plugins {
+    id("org.jetbrains.kotlin.jvm") version "1.5.21"
+    id("org.jetbrains.kotlin.kapt") version "1.5.21"
+    id("com.github.johnrengelman.shadow") version "7.0.0"
+    id("io.micronaut.application") version "2.0.3"
+    id("org.jetbrains.kotlin.plugin.allopen") version "1.5.21"
+    id("com.google.protobuf") version "0.8.15"
+    id 'pl.allegro.tech.build.axion-release' version '1.13.2'
+    id "org.flywaydb.flyway" version "7.15.0"
+}
+
+
+ext {
+    databaseUser = System.getenv("DB_USER")
+    databasePassword = System.getenv("DB_PASS")
+    databaseHost = System.getenv("DB_HOST")
+    databaseName = System.getenv("DB_NAME")
+}
+
+version = "0.1"
+group = "jgdledge.coroutine.reactive"
+
+repositories {
+    mavenCentral()
+}
+
+micronaut {
+    testRuntime("junit5")
+    processing {
+        incremental(true)
+        annotations("jgdledge.coroutine.reactive.*")
+    }
+}
+
+tasks.withType(JavaCompile) {
+    options.compilerArgs = [
+            '-Amicronaut.processing.incremental=true',
+            '-Amicronaut.processing.annotations=coroutine.runtime.*',
+    ]
+}
+
+dependencies {
+    implementation("io.micronaut:micronaut-runtime:$micronautVersion")
+    implementation("io.micronaut.grpc:micronaut-grpc-runtime:$micronautVersion")
+//    implementation("javax.annotation:javax.annotation-api")
+    runtimeOnly("ch.qos.logback:logback-classic")
+    implementation("io.micronaut:micronaut-validation:$micronautVersion")
+
+    // Annotation Processors
+    annotationProcessor("io.micronaut.data:micronaut-data-processor:$micronautVersion")
+    annotationProcessor("io.micronaut.security:micronaut-security-annotations:$micronautVersion")
+
+    // R2dbc Related
+    implementation("io.micronaut.data:micronaut-data-r2dbc")
+    implementation("io.micronaut.r2dbc:micronaut-r2dbc-core")
+
+    implementation("io.micronaut.flyway:micronaut-flyway")
+
+    implementation("io.micronaut.kotlin:micronaut-kotlin-runtime")
+    implementation("org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlinVersion}")
+
+    // Kotlin
+    implementation("io.grpc:grpc-kotlin-stub:$grpcKotlinVersion")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinxCoroutinesJvmVersion")
+    implementation("io.github.microutils:kotlin-logging-jvm:2.0.10")
+
+    // Service / Runtimes
+    implementation("io.micronaut:micronaut-http-server-netty:$micronautVersion")
+    implementation("io.micronaut:micronaut-http-client:$micronautVersion")
+    implementation("io.micronaut:micronaut-management:$micronautVersion")
+    implementation("io.micronaut:micronaut-runtime")
+    implementation("io.micronaut.micrometer:micronaut-micrometer-registry-prometheus")
+
+    // Testing
+    implementation("io.micronaut.sql:micronaut-jdbc-hikari")
+    testImplementation("io.micronaut:micronaut-http-client:$micronautVersion")
+    testImplementation("dev.miku:r2dbc-mysql") // r2dbc Driver for MySQL
+    testImplementation("org.testcontainers:junit-jupiter")
+    testImplementation("org.testcontainers:testcontainers")
+    testImplementation("org.testcontainers:r2dbc")
+    testImplementation("org.testcontainers:mysql")
+
+    // the following is a dependency of TestContainer
+    implementation("io.micronaut.cache:micronaut-cache-caffeine")
+
+    // DB Drivers
+    // NOTE: May need to use mariaDB drivers if we decide to build a native image
+    runtimeOnly("dev.miku:r2dbc-mysql") // r2dbc Driver
+    runtimeOnly("mysql:mysql-connector-java") // Std driver for Flyway
+
+    //ADDED FOR JAVA
+    implementation(platform("io.projectreactor:reactor-bom:2020.0.7"))
+    implementation 'io.r2dbc:r2dbc-pool:0.9.0.RC1'
+}
+
+
+application {
+    mainClass.set("jgdledge.coroutines.reactive.ApplicationKt")
+}
+java {
+    sourceCompatibility = JavaVersion.toVersion("16")
+    targetCompatibility = JavaVersion.toVersion("16")
+}
+
+tasks {
+    compileKotlin {
+        kotlinOptions {
+            jvmTarget = "14"
+        }
+    }
+    compileTestKotlin {
+        kotlinOptions {
+            jvmTarget = "14"
+        }
+    }
+}
+
+
+flyway {
+    url = "jdbc:mysql://${databaseHost}:3306/${databaseName}?enabledTLSProtocols=TLSv1.2,TLSv1.3"
+    user = "${databaseUser}"
+    password = "${databasePassword}"
+    schemas = ["${databaseName}"]
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs("build/generated/source/proto/main/grpc")
+            srcDirs("build/generated/source/proto/main/java")
+        }
+    }
+}
+
+//protobuf {
+//    protoc {
+//        artifact = "com.google.protobuf:protoc:3.17.2"
+//    }
+//    plugins {
+//        id("grpc") {
+//            artifact = "io.grpc:protoc-gen-grpc-java:1.38.0"
+//        }
+//    }
+//    generateProtoTasks {
+//        ofSourceSet("main").forEach {
+//            it.plugins {
+//                // Apply the "grpc" plugin whose spec is defined above, without options.
+//                id("grpc")
+//            }
+//        }
+//    }
+//}
+
+
+protobuf {
+    protoc { artifact = "com.google.protobuf:protoc:3.17.2" }
+    plugins {
+        grpc { artifact = "io.grpc:protoc-gen-grpc-java:1.38.0" }
+    }
+    generateProtoTasks {
+        all()*.plugins { grpc {} }
+    }
+}

@@ -1,0 +1,10 @@
+jgdledge.coroutines.reactive.test.framework.db.$MySqlContainerFactory$CreateTestContainer0$Definition$Reference
+jgdledge.coroutines.reactive.test.$AccountCounter$Definition$Reference
+jgdledge.coroutines.reactive.data.repository.$AccountRepositoryCoroutineTest$Definition$Reference
+jgdledge.coroutines.reactive.test.framework.db.$MySqlContainerFactory$CreateJdbcDataSource1$Definition$Reference
+jgdledge.coroutines.reactive.test.framework.db.$MySqlContainerFactory$CreateR2dbcOptions2$Definition$Reference
+jgdledge.coroutines.reactive.test.framework.db.$MySqlContainerFactory$CreateR2dbcConnectionFactory3$Definition$Reference
+jgdledge.coroutines.reactive.test.framework.db.$MySqlContainerFactory$Definition$Reference
+jgdledge.coroutines.reactive.$JgdledgeCoroutinesVsReactiveTest$Definition$Reference
+jgdledge.coroutines.reactive.test.framework.db.$MysqlContainerConfiguration$Definition$Reference
+jgdledge.coroutines.reactive.data.repository.$AccountRepositoryReactiveTest$Definition$Reference

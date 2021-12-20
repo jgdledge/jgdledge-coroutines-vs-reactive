@@ -1,0 +1,17 @@
+# Configuration overrides to make use of Test-Containers with MySQL
+# Intended to be layered on top of application-test.yml
+# i.e. when activating the 'tc-mysql' environment, also activate 'test'
+
+# Custom Configuration for MySQL/TestContainer usage.  Needed to have a SINGLE container for both JDBC and R2DBC.
+# This custom setup is why we do NOT define "datasources" and "r2dbc.datasources" in this file.
+# See: MySQLContainerConfiguration for how this is used
+test:
+  tc-mysql:
+    account:
+      # Debugging note: mysql:5.7 causes SSLHandshakeException issues.  mysql:8 works for the time being.
+      dockerImageName: mysql:8
+r2dbc:
+  datasources:
+    account:
+      options:
+        driver: pool

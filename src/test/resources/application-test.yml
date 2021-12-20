@@ -1,0 +1,28 @@
+# Tests use a random available port
+grpc:
+  server:
+    port: 0
+
+# Enable Flyway for test environment
+flyway:
+  enabled: true
+  datasources:
+    account:
+      enabled: true
+      locations: "filesystem:src/main/resources/db.migration"
+
+micronaut:
+  ## Configured metrics using prometheus registry
+  metrics:
+    enabled: true
+    export:
+      prometheus:
+        # Whether to enable the reporter. Could disable to local dev for example.
+        enabled: false
+    endpoints:
+      metrics:
+        enabled: true
+        sensitive: false
+      prometheus:
+        enabled: false
+        sensitive: false

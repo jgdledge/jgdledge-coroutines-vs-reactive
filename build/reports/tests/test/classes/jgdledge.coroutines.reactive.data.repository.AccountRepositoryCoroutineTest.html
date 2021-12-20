@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - AccountRepositoryCoroutineTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>AccountRepositoryCoroutineTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/jgdledge.coroutines.reactive.data.repository.html">jgdledge.coroutines.reactive.data.repository</a> &gt; AccountRepositoryCoroutineTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">13.674s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">test create 5000 accounts dynamic batched()</td>
+<td class="success">13.674s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>?[36m13:46:17.967?[0;39m ?[1;30m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[35mi.m.context.env.DefaultEnvironment?[0;39m - Established active environments: [test, tc]
+?[36m13:46:18.456?[0;39m ?[1;30m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[35mo.t.d.DockerClientProviderStrategy?[0;39m - Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+?[36m13:46:19.886?[0;39m ?[1;30m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[35mo.t.d.DockerClientProviderStrategy?[0;39m - Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+?[36m13:46:19.888?[0;39m ?[1;30m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[35mo.testcontainers.DockerClientFactory?[0;39m - Docker host IP address is localhost
+?[36m13:46:20.051?[0;39m ?[1;30m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[35mo.testcontainers.DockerClientFactory?[0;39m - Connected to docker: 
+  Server Version: 20.10.8
+  API Version: 1.41
+  Operating System: Docker Desktop
+  Total Memory: 1985 MB
+?[36m13:46:20.055?[0;39m ?[1;30m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[35mo.t.utility.ImageNameSubstitutor?[0;39m - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+?[36m13:46:20.318?[0;39m ?[1;30m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[35mo.t.utility.RegistryAuthLocator?[0;39m - Credential helper/store (docker-credential-desktop) does not have credentials for index.docker.io
+?[36m13:46:21.781?[0;39m ?[1;30m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[35mo.testcontainers.DockerClientFactory?[0;39m - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+?[36m13:46:21.782?[0;39m ?[1;30m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[35mo.testcontainers.DockerClientFactory?[0;39m - Checking the system...
+?[36m13:46:21.783?[0;39m ?[1;30m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[35mo.testcontainers.DockerClientFactory?[0;39m - ✔︎ Docker server version should be at least 1.6.0
+?[36m13:46:21.970?[0;39m ?[1;30m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[35mo.testcontainers.DockerClientFactory?[0;39m - ✔︎ Docker environment should have more than 2GB free disk space
+?[36m13:46:21.988?[0;39m ?[1;30m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[35m&#x1f433; [mysql:8]?[0;39m - Creating container for image: mysql:8
+?[36m13:46:21.993?[0;39m ?[1;30m[Test worker]?[0;39m ?[31mWARN ?[0;39m ?[35m&#x1f433; [mysql:8]?[0;39m - Reuse was requested but the environment does not support the reuse of containers
+To enable reuse of containers, you must set 'testcontainers.reuse.enable=true' in a file located at /Users/bunch/.testcontainers.properties
+?[36m13:46:22.207?[0;39m ?[1;30m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[35m&#x1f433; [mysql:8]?[0;39m - Starting container with ID: 40d83b90e5951d951c657caa49b40af1bd644336b51fe4399c643600208e5486
+?[36m13:46:22.737?[0;39m ?[1;30m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[35m&#x1f433; [mysql:8]?[0;39m - Container mysql:8 is starting: 40d83b90e5951d951c657caa49b40af1bd644336b51fe4399c643600208e5486
+?[36m13:46:22.759?[0;39m ?[1;30m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[35m&#x1f433; [mysql:8]?[0;39m - Waiting for database connection to become available at jdbc:mysql://localhost:55570/account using query 'SELECT 1'
+?[36m13:46:22.761?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDOUT: 2021-12-20 18:46:22+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.26-1debian10 started.
+?[36m13:46:22.984?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDOUT: 2021-12-20 18:46:23+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+?[36m13:46:23.005?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDOUT: 2021-12-20 18:46:23+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.26-1debian10 started.
+?[36m13:46:23.088?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDOUT: 2021-12-20 18:46:23+00:00 [Note] [Entrypoint]: Initializing database files
+?[36m13:46:23.112?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDERR: 2021-12-20T18:46:23.133572Z 0 [System] [MY-013169] [Server] /usr/sbin/mysqld (mysqld 8.0.26) initializing of server in progress as process 42
+?[36m13:46:23.133?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDERR: 2021-12-20T18:46:23.165309Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+?[36m13:46:24.095?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDERR: 2021-12-20T18:46:24.127591Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+?[36m13:46:26.574?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDERR: 2021-12-20T18:46:26.574176Z 0 [Warning] [MY-013746] [Server] A deprecated TLS version TLSv1 is enabled for channel mysql_main
+?[36m13:46:26.575?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDERR: 2021-12-20T18:46:26.574553Z 0 [Warning] [MY-013746] [Server] A deprecated TLS version TLSv1.1 is enabled for channel mysql_main
+?[36m13:46:26.625?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDERR: 2021-12-20T18:46:26.625015Z 6 [Warning] [MY-010453] [Server] root@localhost is created with an empty password ! Please consider switching off the --initialize-insecure option.
+?[36m13:46:31.167?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDOUT: 2021-12-20 18:46:31+00:00 [Note] [Entrypoint]: Database files initialized
+?[36m13:46:31.170?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDOUT: 2021-12-20 18:46:31+00:00 [Note] [Entrypoint]: Starting temporary server
+?[36m13:46:31.547?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDERR: 2021-12-20T18:46:31.523472Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.26) starting as process 91
+?[36m13:46:31.551?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDERR: 2021-12-20T18:46:31.556497Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+?[36m13:46:31.950?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDERR: 2021-12-20T18:46:31.956272Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+?[36m13:46:32.378?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDERR: 2021-12-20T18:46:32.384519Z 0 [Warning] [MY-013746] [Server] A deprecated TLS version TLSv1 is enabled for channel mysql_main
+?[36m13:46:32.378?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDERR: 2021-12-20T18:46:32.384736Z 0 [Warning] [MY-013746] [Server] A deprecated TLS version TLSv1.1 is enabled for channel mysql_main
+?[36m13:46:32.380?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDERR: 2021-12-20T18:46:32.386820Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+?[36m13:46:32.381?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDERR: 2021-12-20T18:46:32.387254Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+?[36m13:46:32.385?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDERR: 2021-12-20T18:46:32.391607Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+?[36m13:46:32.451?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDERR: 2021-12-20T18:46:32.457775Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Socket: /var/run/mysqld/mysqlx.sock
+?[36m13:46:32.452?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDERR: 2021-12-20T18:46:32.458416Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.26'  socket: '/var/run/mysqld/mysqld.sock'  port: 0  MySQL Community Server - GPL.
+?[36m13:46:32.470?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDOUT: 2021-12-20 18:46:32+00:00 [Note] [Entrypoint]: Temporary server started.
+?[36m13:46:33.609?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDERR: Warning: Unable to load '/usr/share/zoneinfo/iso3166.tab' as time zone. Skipping it.
+?[36m13:46:33.610?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDERR: Warning: Unable to load '/usr/share/zoneinfo/leap-seconds.list' as time zone. Skipping it.
+?[36m13:46:35.697?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDERR: Warning: Unable to load '/usr/share/zoneinfo/zone.tab' as time zone. Skipping it.
+?[36m13:46:35.697?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDERR: Warning: Unable to load '/usr/share/zoneinfo/zone1970.tab' as time zone. Skipping it.
+?[36m13:46:35.870?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDOUT: 2021-12-20 18:46:35+00:00 [Note] [Entrypoint]: Creating database account
+?[36m13:46:35.895?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDOUT: 2021-12-20 18:46:35+00:00 [Note] [Entrypoint]: Creating user test
+?[36m13:46:35.915?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDOUT: 2021-12-20 18:46:35+00:00 [Note] [Entrypoint]: Giving user test access to schema account
+?[36m13:46:35.929?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDOUT: 
+?[36m13:46:35.930?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDOUT: 2021-12-20 18:46:35+00:00 [Note] [Entrypoint]: Stopping temporary server
+?[36m13:46:35.938?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDERR: 2021-12-20T18:46:35.949145Z 13 [System] [MY-013172] [Server] Received SHUTDOWN from user root. Shutting down mysqld (Version: 8.0.26).
+?[36m13:46:36.669?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDERR: 2021-12-20T18:46:36.681034Z 0 [System] [MY-010910] [Server] /usr/sbin/mysqld: Shutdown complete (mysqld 8.0.26)  MySQL Community Server - GPL.
+?[36m13:46:36.943?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDOUT: 2021-12-20 18:46:36+00:00 [Note] [Entrypoint]: Temporary server stopped
+?[36m13:46:36.943?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDOUT: 
+?[36m13:46:36.945?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDOUT: 2021-12-20 18:46:36+00:00 [Note] [Entrypoint]: MySQL init process done. Ready for start up.
+?[36m13:46:36.945?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDOUT: 
+?[36m13:46:37.227?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDERR: 2021-12-20T18:46:37.224793Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.26) starting as process 1
+?[36m13:46:37.230?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDERR: 2021-12-20T18:46:37.242677Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+?[36m13:46:37.386?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDERR: 2021-12-20T18:46:37.399098Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+?[36m13:46:37.825?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDERR: 2021-12-20T18:46:37.824012Z 0 [Warning] [MY-013746] [Server] A deprecated TLS version TLSv1 is enabled for channel mysql_main
+?[36m13:46:37.826?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDERR: 2021-12-20T18:46:37.824367Z 0 [Warning] [MY-013746] [Server] A deprecated TLS version TLSv1.1 is enabled for channel mysql_main
+?[36m13:46:37.826?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDERR: 2021-12-20T18:46:37.825542Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+?[36m13:46:37.826?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDERR: 2021-12-20T18:46:37.825841Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+?[36m13:46:37.832?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDERR: 2021-12-20T18:46:37.843688Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+?[36m13:46:37.896?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDERR: 2021-12-20T18:46:37.908570Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+?[36m13:46:37.897?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDERR: 2021-12-20T18:46:37.908819Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.26'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+?[36m13:46:37.993?[0;39m ?[1;30m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[35m&#x1f433; [mysql:8]?[0;39m - Container is started (JDBC URL: jdbc:mysql://localhost:55570/account)
+?[36m13:46:37.994?[0;39m ?[1;30m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[35m&#x1f433; [mysql:8]?[0;39m - Container mysql:8 started in PT16.019032S
+?[36m13:46:38.588?[0;39m ?[1;30m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[35mcom.zaxxer.hikari.HikariDataSource?[0;39m - HikariPool-1 - Starting...
+?[36m13:46:38.739?[0;39m ?[1;30m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[35mcom.zaxxer.hikari.HikariDataSource?[0;39m - HikariPool-1 - Start completed.
+?[36m13:46:38.747?[0;39m ?[1;30m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[35mi.m.flyway.AbstractFlywayMigration?[0;39m - Running migrations for database with qualifier [account]
+?[36m13:46:38.821?[0;39m ?[1;30m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[35mo.f.c.i.license.VersionPrinter?[0;39m - Flyway Community Edition 7.15.0 by Redgate
+?[36m13:46:38.821?[0;39m ?[1;30m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[35mo.f.c.i.d.base.BaseDatabaseType?[0;39m - Database: jdbc:mysql://localhost:55570/account (MySQL 8.0)
+?[36m13:46:38.934?[0;39m ?[1;30m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[35mo.f.core.internal.command.DbValidate?[0;39m - Successfully validated 1 migration (execution time 00:00.036s)
+?[36m13:46:38.979?[0;39m ?[1;30m[docker-java-stream--1280358378]?[0;39m ?[34mINFO ?[0;39m ?[35mj.c.r.t.f.db.MySqlContainerFactory?[0;39m - STDERR: mbind: Operation not permitted
+?[36m13:46:39.002?[0;39m ?[1;30m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[35mo.f.c.i.s.JdbcTableSchemaHistory?[0;39m - Creating Schema History table `account`.`flyway_schema_history` ...
+?[36m13:46:39.191?[0;39m ?[1;30m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[35mo.f.core.internal.command.DbMigrate?[0;39m - Current version of schema `account`: &lt;&lt; Empty Schema &gt;&gt;
+?[36m13:46:39.211?[0;39m ?[1;30m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[35mo.f.core.internal.command.DbMigrate?[0;39m - Migrating schema `account` to version &quot;1.000.001 - unicorn m1&quot;
+?[36m13:46:39.237?[0;39m ?[1;30m[Test worker]?[0;39m ?[31mWARN ?[0;39m ?[35mo.f.c.i.s.DefaultSqlScriptExecutor?[0;39m - DB: Unknown table 'account.account' (SQL State: 42S02 - Error Code: 1051)
+?[36m13:46:39.353?[0;39m ?[1;30m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[35mo.f.core.internal.command.DbMigrate?[0;39m - Successfully applied 1 migration to schema `account`, now at version v1.000.001 (execution time 00:00.181s)
+?[36m13:46:44.875?[0;39m ?[1;30m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[35mi.m.g.s.GrpcEmbeddedServerListener?[0;39m - GRPC started on port 54345
+Kotlin Coroutine runtime (dynamic batched): PT13.320773S
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.1</a> at Dec. 20, 2021, 1:46:59 p.m.</p>
+</div>
+</div>
+</body>
+</html>
